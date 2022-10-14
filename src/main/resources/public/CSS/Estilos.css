@@ -115,14 +115,14 @@ div.subtitulo #subtitulo{
     width:50%; 
 }
 
-div.form_cloud, div.form_client, div.form_message, div.form_category, div.form_Reservation, div.form_dates {
+div.form_bike, div.form_client, div.form_message, div.form_category, div.form_Reservation, div.form_dates {
     margin-left: 20%;
     margin-right: 20%;
     border-radius:1%;
     display: flex;
 }
 
-div.form_cloud label, div.form_client label, div.form_message label, div.form_category label, div.form_Reservation label, div.form_dates label { 
+div.form_bike label, div.form_client label, div.form_message label, div.form_category label, div.form_Reservation label, div.form_dates label {
     text-align: left;
     color: white; 
     font-family: 'Dosis', sans-serif;
@@ -131,7 +131,7 @@ div.form_cloud label, div.form_client label, div.form_message label, div.form_ca
     width: 550px; 
 } 
 
-div.form_cloud input, div.form_client input, div.form_message input, div.form_category input, div.form_Reservation input, div.form_dates input { 
+div.form_bike input, div.form_client input, div.form_message input, div.form_category input, div.form_Reservation input, div.form_dates input {
     color: whitesmoke;
     border: none;
     background-color: rgba(255, 255, 255, 0.233);
@@ -166,7 +166,7 @@ div.botones {
     width:40px; 
 }
 
-div.form_cloud button, div.form_client button, div.form_message button, div.form_category button, div.form_Reservation button, div.form_dates button {
+div.form_bike button, div.form_client button, div.form_message button, div.form_category button, div.form_Reservation button, div.form_dates button {
     margin-left: 0%;
     margin-right: 10%;
     height: 40px;
@@ -213,7 +213,7 @@ option{
     background-color:grey;
 }
 
-div.tableCloud, div.tableClient, div.tableMessage, div.tableCategory, div.tableReservation {
+div.tableBike, div.tableClient, div.tableMessage, div.tableCategory, div.tableReservation {
     margin-top: 50px;
     margin-left: 10%;
     margin-bottom: 1px;
@@ -239,7 +239,7 @@ th {
     text-align: center;
 }
 
-div.tableCloud table, div.tableClient table, div.tableMessage table, div.tableCategory table, div.tableReservation table{
+div.tableBike table, div.tableClient table, div.tableMessage table, div.tableCategory table, div.tableReservation table{
     margin-left: 15%;
     margin-right: 20%;
 }

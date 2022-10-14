@@ -1,36 +1,4 @@
 //Funciones para la tabla cloud
-function crearCategory() {
-    $("#id").attr("readonly", true);
-    var name = $("#name").val();
-    var description = $("#description").val();
-
-    if($("#name").val() == "" || $("#description") == ""){
-            alert("Faltan campos por llenar");
-        }else{
-            var data = {
-                name:name,
-                description:description,
-            };
-
-            $.ajax({
-                url: "http://localhost:8080/api/Category/save",
-                type: "POST",
-                datatype: "json",
-                data:JSON.stringify(data),
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                statusCode: {
-                    201: function(){
-                        consultarCategory();
-                        $("#name").val("");
-                        $("#brand").val("");
-                    }
-                }
-            });
-        }
-}
-
 function cargarCategory(){
     $.ajax({
         url:"http://localhost:8080/api/Category/all",
@@ -84,7 +52,6 @@ function consultarCategory(){
         }*/
     });
 }
-
 
 function consultarCloud(){
     $.ajax({

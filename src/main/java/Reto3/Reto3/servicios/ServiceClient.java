@@ -16,11 +16,9 @@ public class ServiceClient {
     public Client getClient(Integer id){
         return  rc.getClient(id).get();
     }
-    public Client save(Client bik){
-        return rc.save(bik);
+    public Client save(Client cli){
+        return rc.save(cli);
     }
-    public Client update(Client bik){
-        return  rc.update(bik);
-    }
+    public Client update(Client cli){ return rc.update(cli); }
     public void delete(Integer doc){ rc.deleteClient(doc); }
 }

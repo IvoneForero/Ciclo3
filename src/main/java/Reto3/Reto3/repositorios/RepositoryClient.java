@@ -32,12 +32,16 @@ public class RepositoryClient {
     }
 
     public Client update(Client cli) {
+
         Optional<Client> e = rc.findById(cli.getIdClient());
-        if (!e.isEmpty()) {
+        if (e==null) {
+            return cli;
+        } else {
             if (cli.getName() != null)
             {
                 e.get().setName(cli.getName());
             }
+
             if (cli.getEmail() != null)
             {
                 e.get().setEmail(cli.getEmail());
@@ -46,10 +50,7 @@ public class RepositoryClient {
             {
                 e.get().setAge(cli.getAge());
             }
-            rc.save(e.get());
-            return e.get();
-        } else {
-            return cli;
+            return rc.save(e.get());
         }
     }
 

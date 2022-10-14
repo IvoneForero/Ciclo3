@@ -35,12 +35,17 @@
 
         <div class="subtitulo">
             <br>
-            <h1 id="subtitulo">Crud - Bicicletas</h1>
+            <h1 id="subtitulo">Bicicletas</h1>
             <br>
         </div>
 
-        <div class="form_cloud">
+        <div class="form_bike">
             <section class="formulario">
+                <label for="idBike">Id</label>
+                <br>
+                <input type="number" placeholder="4056" id="idBike" readonly>
+
+                <br><br>
                 <label for="name">Name</label>
                 <br>
                 <input type="text" placeholder="Example" maxlength="4000" id="name">
@@ -61,10 +66,6 @@
                 <input type="text" placeholder="Example" id="description">
 
                 <br><br>
-                <!--<label for="category">Category</label>
-                <select class="form-select" aria-label="Default select example" id="category"></select>
-                <button id="buttonAdd" type="button" class="btn btn-danger" onclick="">+</button>
-                -->
                 <label for="category">Category</label>
                 <div class="seleccion">
                     <select class="form-control form-select category" aria-label="Default select example" id="categoryAdd"></select>
@@ -102,14 +103,14 @@
             <!--Botones-->
 
             <section class="botones">
-                <button type="button" class="btn btn-outline-light" onclick="crearCloud()">Crear</button>
-                <button type="button" class="btn btn-outline-light" onclick="actualizarCloud()">Actualizar</button>
-                <button type="button" class="btn btn-outline-light" onclick="recargarCloud()">Recargar</button>
+                <button type="button" class="btn btn-outline-light" onclick="crearBike()">Crear</button>
+                <button type="button" class="btn btn-outline-light" onclick="actualizarBike()">Actualizar</button>
+                <button type="button" class="btn btn-outline-light" onclick="limpiarBike()">Limpiar</button>
                 <br><br>
             </section>
         </div>
 
-        <div class="tableCloud">
+        <div class="tableBike">
             <table> 
                 <thead>
                     <tr>
@@ -124,7 +125,7 @@
                     </tr>
                 </thead>
         
-                <tbody class="cuerpo" id="contenidoTablaCloud">
+                <tbody class="cuerpo" id="contenidoTablaBike">
                     
                 </tbody>
             </table>
@@ -133,7 +134,7 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
-        <script src="../JS/app.js"></script>
+        <script src="../JS/bike.js"></script>
 
     </body>
 </html>

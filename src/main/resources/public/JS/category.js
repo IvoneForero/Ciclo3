@@ -81,7 +81,6 @@ function actualizarCategory(){
             description:description
         }
         let datosEnvio=JSON.stringify(datos);
-        alert(datosEnvio);
         $.ajax({
             url:"http://localhost:8080/api/Category/update",
             type:"PUT",
@@ -90,7 +89,6 @@ function actualizarCategory(){
             dataType:"JSON",
             statusCode: {
             201: function(){
-                alert("ACA");
                 consultarCategory();
                 $("#idCategory").val("");
                 $("#name").val("");
