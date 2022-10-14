@@ -20,7 +20,7 @@ public class ServiceClient {
         return rc.save(bik);
     }
     public Client update(Client bik){
-        return  rc.save(bik);
+        return  rc.update(bik);
     }
     public void delete(Integer doc){ rc.deleteClient(doc); }
 }

@@ -31,7 +31,7 @@ public class RepositoryBike {
 
     public Bike update(Bike bik) {
         Optional<Bike> e = rb.findById(bik.getId());
-        if (!e.isPresent()) {
+        if (!e.isEmpty()) {
             if (bik.getName() != null)
             {
                 e.get().setName(bik.getName());

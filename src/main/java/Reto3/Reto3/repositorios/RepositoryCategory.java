@@ -31,7 +31,7 @@ public class RepositoryCategory {
 
     public Category update(Category cat) {
         Optional<Category> e = rc.findById(cat.getId());
-        if (!e.isPresent()) {
+        if (!e.isEmpty()) {
             if (cat.getName() != null)
             {
                 e.get().setName(cat.getName());

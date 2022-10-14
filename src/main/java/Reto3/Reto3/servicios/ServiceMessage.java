@@ -21,7 +21,7 @@ public class ServiceMessage {
         return rm.save(msg);
     }
     public Message update(Message msg){
-        return  rm.save(msg);
+        return  rm.update(msg);
     }
     public void delete(Integer doc){ rm.deleteMessage(doc); }
 }

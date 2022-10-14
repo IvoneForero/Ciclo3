@@ -24,7 +24,7 @@ public class ServiceBike {
         return rb.save(bik);
     }
     public Bike update(Bike bik){
-        return  rb.save(bik);
+        return  rb.update(bik);
     }
     public void delete(Integer doc){ rb.deleteBike(doc); }
 }

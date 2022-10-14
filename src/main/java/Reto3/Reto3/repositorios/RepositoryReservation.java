@@ -32,7 +32,7 @@ public class RepositoryReservation {
 
     public Reservation update(Reservation rsv) {
         Optional<Reservation> e = rcr.findById(rsv.getIdReservation());
-        if (!e.isPresent()) {
+        if (!e.isEmpty()) {
             if (rsv.getStartDate() != null)
             {
                 e.get().setStartDate(rsv.getStartDate());

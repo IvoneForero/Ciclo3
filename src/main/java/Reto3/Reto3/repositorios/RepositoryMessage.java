@@ -31,7 +31,7 @@ public class RepositoryMessage {
 
     public Message update(Message cat) {
         Optional<Message> e = rcm.findById(cat.getIdMessage());
-        if (!e.isPresent()) {
+        if (!e.isEmpty()) {
             if (cat.getMessageText() != null)
             {
                 e.get().setMessageText(cat.getMessageText());

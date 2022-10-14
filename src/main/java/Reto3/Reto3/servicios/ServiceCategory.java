@@ -19,7 +19,7 @@ public class ServiceCategory {
         return rc.save(cat);
     }
     public Category update(Category cat){
-        return  rc.save(cat);
+        return  rc.update(cat);
     }
     public void delete(Integer doc){ rc.deleteCategory(doc); }
 }

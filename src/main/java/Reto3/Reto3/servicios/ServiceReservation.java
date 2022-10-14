@@ -27,7 +27,7 @@ public class ServiceReservation {
         return rr.save(rsv);
     }
     public Reservation update(Reservation rsv){
-        return  rr.save(rsv);
+        return  rr.update(rsv);
     }
     public void delete(Integer doc){ rr.deleteReservation(doc); }
     public List<Reservation> getReservationPeriod(String dateA, String dateB) {

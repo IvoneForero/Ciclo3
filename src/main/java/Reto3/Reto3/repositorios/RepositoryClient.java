@@ -33,7 +33,7 @@ public class RepositoryClient {
 
     public Client update(Client cli) {
         Optional<Client> e = rc.findById(cli.getIdClient());
-        if (!e.isPresent()) {
+        if (!e.isEmpty()) {
             if (cli.getName() != null)
             {
                 e.get().setName(cli.getName());
