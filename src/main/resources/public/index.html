@@ -13,37 +13,21 @@
     <link rel="stylesheet" href="CSS/Estilos.css">
 </head>
 <body>
-    <div  class="container unauthenticated">
-        Iniciar sesión con git
-        <a href="/oauth2/authorization/github">Click aqui</a>
+<div id="contenedor">
+    <div class="tituloInicio">
+        <br>
+        <h1>Bienvenido al reto número 5</h1>
     </div>
 
-    <div class="container authenticated" style="display:none" id="a">
-        <div id="contenedor">
-            <div class="tituloInicio">
-                <br>
-                <h1>MINTIC CICLO 3 GRUPO 9</h1>
-            </div>
-
-            <div class="experiencia">
-                <img src="Images/red.png" height="100px" alt="">
-                <br><br>
-                <button type="button" class="btn btn-outline-light" onclick="location.href='Page/category.html'">Iniciar experiencia</button>
-            </div>
-        </div>
+    <div class="experiencia">
+        <img src="Images/red.png" height="100px" alt="">
+        <br><br>
+        <button type="button" class="btn btn-outline-light" onclick="location.href='Page/category.html'">Iniciar experiencia</button>
     </div>
+</div>
+
+
 </body>
 
-<script type="text/javascript">
-    $.get("/user",function(data){
-        $("#user").html(data.name);
-        $(".unauthenticated").hide()
-        $(".authenticated").show()
 
-    });
-</script >
-<script type="text/javascript">
-    dat=$('#user').val();
-    console.log(dat)
-</script>
 </html>

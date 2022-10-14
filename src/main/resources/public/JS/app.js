@@ -1,4 +1,36 @@
 //Funciones para la tabla cloud
+function crearCategory() {
+    $("#id").attr("readonly", true);
+    var name = $("#name").val();
+    var description = $("#description").val();
+
+    if($("#name").val() == "" || $("#description") == ""){
+            alert("Faltan campos por llenar");
+        }else{
+            var data = {
+                name:name,
+                description:description,
+            };
+
+            $.ajax({
+                url: "http://localhost:8080/api/Category/save",
+                type: "POST",
+                datatype: "json",
+                data:JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                statusCode: {
+                    201: function(){
+                        consultarCategory();
+                        $("#name").val("");
+                        $("#brand").val("");
+                    }
+                }
+            });
+        }
+}
+
 function cargarCategory(){
     $.ajax({
         url:"http://localhost:8080/api/Category/all",
@@ -19,6 +51,40 @@ function cargarCategory(){
         }
     });
 }
+
+function consultarCategory(){
+    $.ajax({
+        url:"http://localhost:8080/api/Category/all",
+        type:"GET",
+        datatype:"json",
+        success: function (response) {
+            $("#contenidoTablaCategory").empty();
+            //console.log(response);
+            response.forEach(element => {
+                var row = $("<tr>");
+                row.append($("<td>").text(element.id));
+                row.append($("<td>").text(element.name));
+                row.append($("<td>").text(element.description));
+
+                //console.log(element.category);
+
+                if(element.category == null) {
+                    row.append($("<td>").text("Ninguna"));
+                }else{
+                    row.append($("<td>").text(element.category.name));
+                }
+
+                row.append($("<td>").append('<button type="button" class="btn btn-outline-light" onclick="seleccionarCloud('+element.id+')" >Seleccionar</button>'));
+                row.append($("<td>").append('<button type="button" class="btn btn-outline-light" onclick="eliminarCloud('+element.id+')" >Eliminar</button>'));
+                $("#contenidoTablaCategory").append(row);
+            });
+        }/*,
+        error: function(xhr,status) {
+            alert("2. Ocurrio un error en el consumo.");
+        }*/
+    });
+}
+
 
 function consultarCloud(){
     $.ajax({
