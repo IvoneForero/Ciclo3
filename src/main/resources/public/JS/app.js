@@ -1,4 +1,25 @@
 //Funciones para la tabla cloud
+function cargarCategory(){
+    $.ajax({
+        url:"http://localhost:8080/api/Category/all",
+        type:"GET",
+        datatype:"json",
+        success: function (response) {
+            $("#client").empty();
+            $("#client").append($("<option>").val(0).text("Seleccione una categoría"));
+            response.forEach(element => {
+                var option = $("<option>");
+                option.attr("value", element.idCategory);
+                option.text(element.name);
+                $("#client").append(option);
+            });
+        },
+        error: function(xhr,status) {
+            alert("1. Ocurrio un error en el consumo.");
+        }
+    });
+}
+
 function consultarCloud(){
     $.ajax({
         url:"http://localhost:8080/api/Cloud/all",
@@ -29,7 +50,7 @@ function consultarCloud(){
             });
         }/*,
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("2. Ocurrio un error en el consumo.");
         }*/
     });
 }
@@ -206,7 +227,7 @@ function consultarClient(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("3. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -373,7 +394,7 @@ function consultarReservation(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("4. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -558,7 +579,7 @@ function consultarMessage(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("5. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -749,14 +770,14 @@ function cargarCategorias(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("6. Ocurrio un error en el consumo.");
         }
     });
 }
 
 function cargarCloud(){
     $.ajax({
-        url:"http://localhost:8080/api/Cloud/all",
+        url:"http://localhost:8080/api/category/all",
         type:"GET",
         datatype:"json",
         success: function (response) {
@@ -770,7 +791,7 @@ function cargarCloud(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("7. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -791,14 +812,14 @@ function cargarClient(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("8. Ocurrio un error en el consumo.");
         }
     });
 }
 
 function cargarCloud2(){
     $.ajax({
-        url:"http://localhost:8080/api/Cloud/all",
+        url:"http://localhost:8080/api/category/all",
         type:"GET",
         datatype:"json",
         success: function (response) {
@@ -812,7 +833,7 @@ function cargarCloud2(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("9. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -833,7 +854,7 @@ function cargarClient2(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("10. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -858,7 +879,7 @@ function reporteReservasFecha(){
             $("#conteo").val(response);
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("11. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -876,7 +897,7 @@ function reservasCancellCompleted(){
             $("#cancelled").val(response.cancelled);
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("12. Ocurrio un error en el consumo.");
         }
     });
 }
@@ -898,7 +919,7 @@ function topClientes(){
             });
         },
         error: function(xhr,status) {
-            alert("Ocurrio un error en el consumo.");
+            alert("13. Ocurrio un error en el consumo.");
         }
     });
 }

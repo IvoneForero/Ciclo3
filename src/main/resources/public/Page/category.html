@@ -21,7 +21,7 @@
         <br>
         <nav class="menu">
             <a id="op" href="../index.html">Salir</a>
-            <a id="" href="#">Categoria</a>
+            <a id="" href="#">Categoría</a>
             <a id="op" href="bike.html">Bicicleta</a>
             <a id="op" href="cliente.html">Cliente</a>
             <a id="op" href="mensajes.html">Mensajes</a>
@@ -35,94 +35,41 @@
 
         <div class="subtitulo">
             <br>
-            <h1 id="subtitulo">Crud - Cloud</h1>
+            <h1 id="subtitulo">Crud - Categoría</h1>
             <br>
         </div>
 
         <div class="form_cloud">
             <section class="formulario">
-                <label for="id">Id</label>
-                <br>
-                <input type="number" placeholder="4056" id="id" readonly>
-
                 <br><br>
                 <label for="name">Name</label>
                 <br>
                 <input type="text" placeholder="Example" maxlength="4000" id="name">
                 
                 <br><br>
-                <label for="brand">Brand</label>
-                <br>
-                <input type="text" placeholder="Example" id="brand">
-
-                <br><br>
-                <label for="year">Year</label>
-                <br>
-                <input type="number" placeholder="2021" id="year">
-
-                <br><br>
                 <label for="description">Description</label>
                 <br>
                 <input type="text" placeholder="Example" id="description">
 
-                <br><br>
-                <!--<label for="category">Category</label>
-                <select class="form-select" aria-label="Default select example" id="category"></select>
-                <button id="buttonAdd" type="button" class="btn btn-danger" onclick="">+</button>
-                -->
-                <label for="category">Category</label>
-                <div class="seleccion">
-                    <select class="form-control form-select category" aria-label="Default select example" id="categoryAdd"></select>
-                    <button id="add" class="btn btn-light" type="button" id="agregarCategoria" data-bs-toggle="modal" data-bs-target="#categoryModal">+<i class="fa fa-plus"></i></button>
-                </div>
-
             </section>
 
-            <!--Modal -->
-            <div class="modal fade" id="categoryModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>Agregar nueva categoría</h5>
-                            <button id="cerrar" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="modal-form">
-                                <label id="labMod" for="nameCategory">Name</label>
-                                <input class="inMod" type="text" placeholder="Example" maxlength=4000 id="nameCategory">
-
-                                <br><br>
-                                <label id="labMod" for="desc">Description</label>
-                                <input class="inMod" type="text" placeholder="Example" maxlength=4000 id="desc">
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button id="buttonMod" type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
-                            <button id="buttonMod" type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="crearCategoria()">Guardar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
             <!--Botones-->
 
             <section class="botones">
-                <button type="button" class="btn btn-outline-light" onclick="crearCloud()">Crear</button>
-                <button type="button" class="btn btn-outline-light" onclick="actualizarCloud()">Actualizar</button>
-                <button type="button" class="btn btn-outline-light" onclick="recargarCloud()">Recargar</button>
+                <button type="button" class="btn btn-outline-light" onclick="crearCategory()">Crear</button>
+                <button type="button" class="btn btn-outline-light" onclick="actualizarCategory()">Actualizar</button>
+                <button type="button" class="btn btn-outline-light" onclick="recargarCategory()">Recargar</button>
                 <br><br>
             </section>
         </div>
 
-        <div class="tableCloud">
+        <div class="tableCategory">
             
             <table> 
                 <thead>
                     <tr>
                         <th>id</th>
                         <th>name</th>
-                        <th>brand</th>
-                        <th>year</th>
                         <th>description</th>
                         <th>category</th>
                         <th></th>
@@ -130,7 +77,7 @@
                     </tr>
                 </thead>
         
-                <tbody class="cuerpo" id="contenidoTablaCloud">
+                <tbody class="cuerpo" id="contenidoTablaCategory">
                     
                 </tbody>
             </table>
